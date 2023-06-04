@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+div {
+  display: block;
+}
+
+.container {
+  position: relative;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.container .carousel .slick-prev {
+  left: 0px;
+}
+.container .carousel .slick-next.slick-arrow:hover, .container .carousel .slick-prev.slick-arrow:hover {
+  cursor: default;
+}
+.container .carousel .slick-next {
+  right: 0px;
+}
+.container .carousel .slick-prev, .container .carousel .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .carousel .slides {
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.container .carousel .slides .slide {
+  max-width: 100%;
+}
+.container .carousel .slick-dots {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,60 @@
+body
+    margin: 0
+    position: relative
+
+div
+    display: block
+
+.container
+    position: relative
+    margin-right: 5%
+    margin-left: 5%
+
+    // .slick-prev, .slick-next
+    //     z-index: 1
+    //     position: absolute
+    //     display: block
+    //     height: 100%
+    //     width: 15%
+    //     line-height: 0
+    //     font-size: 0px
+    //     cursor: pointer
+    //     background: transparent
+    //     color: transparent
+    //     top: 50%
+    //     transform: translateY(-50%)
+    //     padding: 0px
+    //     border: 0px
+    //     outline: 0px
+
+    .carousel
+
+        .slick-prev
+            left: 0px
+
+        .slick-next.slick-arrow:hover, .slick-prev.slick-arrow:hover 
+            cursor: default
+
+        .slick-next 
+            right: 0px
+
+        .slick-prev, .slick-next 
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+        
+        .slides
+            display: flex
+            overflow: hidden
+            transition: transform 0.3s ease-in-out
+
+            .slide
+                max-width: 100%
+        
+        .slick-dots
+            display: flex
+            justify-content: center
+      
+
+    
+
