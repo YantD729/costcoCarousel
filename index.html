@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to Costco Wholesale </title>
+    <script src="carousel.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <script sec="carousel.js"></script>
     <div class="container">
 
         <div class="carousel">
-            <button class="slick-prev slick-arrow" type="button">"Previous"</button>
+
+            <button class="prev-btn" data-carousel-button="prev"><</button>
+            <button class="next-btn" data-carousel-button="next">></button>
 
             <div class="slides">
-                <div class="slide">
+                <div class="slide" >
                     <img src="https://mobilecontent.costco.com/live/resource/img/23w10152/d-23w10152-fq-june-mailer.jpg" alt="img1">
                 </div>
                 <div class="slide">
                     <img src="https://media-cdn.costco.com/www3-media/?libBID=3843303" alt="img2">
                 </div>
-                <div class="slide">
+                <div class="slide" data-active>
                     <img src="https://media-cdn.costco.com/www3-media/?libBID=3851871" alt="img3">
                 </div>
                 <div class="slide">
@@ -47,43 +50,38 @@
                 </div>    
             </div>
 
-           
-            <button class="slick-next slick-arrow" type="button">"Next"</button>
-
-            <ul class="slick-dots">
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">1</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">2</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">3</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">4</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">5</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">6</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">7</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">8</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">9</button>
-                </li>
-                <li role="presentation">
-                    <button type="button" id="slick-slide-control01" tabindex="0">10</button>
-                </li>
-                <li class="pause">
-                    <button class="playToggle" role="button" type="button">10</button>
-                </li>
+            <div class="dots">
+    
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="dot-icon" type="button"></button>
+                </div>
+                <div class="dot-box">
+                    <button class="playToggle" type="button">||</button>
+                </div>            
             </ul>
     
         </div>
