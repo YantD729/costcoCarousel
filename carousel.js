@@ -13,6 +13,7 @@ let currSlide = null;
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         currSlide = slides[activeIndex];
+        currDot = dots[activeIndex];
         const offset = (button.dataset.carouselButton === 'next') ? 1 : -1;
         activeIndex += offset;
         if (activeIndex < 0) activeIndex  = slides.length - 1;
@@ -32,22 +33,26 @@ autoPlayer = () => {
 autoPlayer();
 
 //stop the image play on mouseover
-slides.addEventListener("mousrover", () => {
-    clearInterval(autoPlayInterval);
+slides.forEach(slide => {
+    slide.addEventListener("mouseover", () => {
+        clearInterval(autoPlayInterval);
+    });
+
+    slide.addEventListener("mouseout", () => {
+        autoPlayer();
+    });
 });
 
-buttons.addEventListener("mousrover", () => {
-    clearInterval(autoPlayInterval);
+buttons.forEach(button => {
+    button.addEventListener("mouseover", () => {
+        clearInterval(autoPlayInterval);
+    });
+
+    button.addEventListener("mouseout", () => {
+        autoPlayer();
+    });
 });
 
- //start the image slider autoplay again on mouseout
- slides.addEventListener("mouseout", () => {
-    autoPlayer();
-  });
-
-  buttons.addEventListener("mouseout", () => {
-    autoPlayer();
-  });
 
 
 

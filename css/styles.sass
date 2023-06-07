@@ -80,39 +80,31 @@ div
                 margin-left: 50%
                 transform: translateX(-50%)
         
-        .dots
-            z-index: 2
-            display: block
-            justify-content: center
-            margin: 15px 0 0
-            
-            .dot-box
-                // justify-content: center
-                display: inline-block
-                height: 20px
-                width: 20px
-                margin: 0px 5px
-                padding: 0px
-                cursor: pointer
-                .dot-icon, .playToggle
-                    display: inline-block
-                    position: relative
-                    background-color: transparent
-                    left: 50%
-                    margin-right: -50%
-                    transform: translate(-50%)
-                .dot-icon
-                    height: 10px
-                    width: 10px
-                    border-radius: 50%
-                    background-color: #ffffff
-                    border: 1px solid #a1a1a1
-                .playToggle
-                    font-weight: 900
-                    border: transparent
-                
-
-      
-
-    
-
+.dots
+    width: 100%
+    margin-top: 15px
+    display: block
+    text-align: center
+    .dot-box
+        text-align: center
+        display: inline-block
+        height: 20px
+        width: 20px
+        margin: 0px 5px
+        padding: 0px
+        cursor: pointer
+        .dot-icon, .playToggle
+            display: inline-block
+            position: relative
+            background-color: transparent
+        .dot-icon
+            height: 10px
+            width: 10px
+            border-radius: 100%
+            background-color: #ffffff
+            border: 1px solid #a1a1a1
+            &:hover
+                background-color: #a1a1a1
+        .playToggle
+            font-weight: 900
+            border: transparent
