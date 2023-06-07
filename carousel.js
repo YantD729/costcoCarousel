@@ -4,11 +4,13 @@ const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot-icon");
 const numOfSlides = slides.length;
 const interval = 2000;
+const toggleBtn = document.querySelector(".playToggle");
 var autoPlayInterval, autoPlayer;
 
 
 let activeIndex = 0;
 let currSlide = null;
+let isPaused = false;
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -53,6 +55,19 @@ buttons.forEach(button => {
     });
 });
 
+//set the play toggle
+toggleBtn.addEventListener("click", () => {
+    if (isPaused) {
+        autoPlayer();
+        isPaused = false;
+        toggleBtn.textContent = '❚❚';
+    }
+    else {
+        clearInterval(autoPlayInterval);
+        isPaused = true;
+        toggleBtn.textContent = '>';
+    }
+});
 
 
 

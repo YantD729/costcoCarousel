@@ -59,6 +59,7 @@ div {
      object-fit: cover;
 }
 .container .carousel .slides .slide {
+  cursor: pointer;
   width: 100%;
   height: 100%;
   display: block;
@@ -100,12 +101,12 @@ div {
   width: 20px;
   margin: 0px 5px;
   padding: 0px;
-  cursor: pointer;
 }
 .dots .dot-box .dot-icon, .dots .dot-box .playToggle {
   display: inline-block;
   position: relative;
   background-color: transparent;
+  cursor: pointer;
 }
 .dots .dot-box .dot-icon {
   height: 10px;
@@ -118,6 +119,5 @@ div {
   background-color: #a1a1a1;
 }
 .dots .dot-box .playToggle {
-  font-weight: 900;
   border: transparent;
 }/*# sourceMappingURL=styles.css.map */
