@@ -23,7 +23,7 @@ div {
   display: block;
   width: 100%;
   height: 100%;
-  padding-bottom: 28%;
+  padding-bottom: 29%;
   position: relative;
 }
 .container .carousel .prev-btn, .container .carousel .next-btn {
@@ -116,6 +116,9 @@ div {
   border: 1px solid #a1a1a1;
 }
 .dots .dot-box .dot-icon:hover {
+  background-color: #a1a1a1;
+}
+.dots .dot-box .dot-icon[data-active] {
   background-color: #a1a1a1;
 }
 .dots .dot-box .playToggle {

@@ -22,7 +22,9 @@ buttons.forEach(button => {
         if (activeIndex >= slides.length) activeIndex = 0;
 
         slides[activeIndex].dataset.active = true;
+        dots[activeIndex].dataset.active = true;
         delete currSlide.dataset.active;
+        delete currDot.dataset.active;
     })
 });
 
