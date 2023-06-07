@@ -71,6 +71,19 @@ toggleBtn.addEventListener("click", () => {
     }
 });
 
+//set the dot button
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        currSlide = slides[activeIndex];
+        currDot = dots[activeIndex];
+        slides[index].dataset.active = true;
+        dots[index].dataset.active = true;
+        activeIndex = index;
+        delete currSlide.dataset.active;
+        delete currDot.dataset.active;
+    });
+});
+
 
 
 
