@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to Costco Wholesale </title>
     <script src="carousel.js" defer></script>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-pause.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,77 +18,11 @@
             <button class="prev-btn" data-carousel-button="prev"><</button>
             <button class="next-btn" data-carousel-button="next">></button>
 
-            <div class="slides">
-                <div class="slide" data-active>
-                    <img src="https://mobilecontent.costco.com/live/resource/img/23w10152/d-23w10152-fq-june-mailer.jpg" alt="img1">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3843303" alt="img2">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3851871" alt="img3">
-                </div>
-                <div class="slide">
-                    <img src="https://mobilecontent.costco.com/live/resource/img/5-17-23-MVM/d-23w09134-may-mvm-fq.jpg" alt="img4">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3848466" alt="img5">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3849522" alt="img6">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3848209" alt="img7">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3839053" alt="img8">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3848498" alt="img9">
-                </div>
-                <div class="slide">
-                    <img src="https://media-cdn.costco.com/www3-media/?libBID=3736261" alt="img10">
-                </div>    
-            </div>
+            <div id="slides"></div>
     
         </div>
     </div>
 
-    <div class="dots">
-    
-        <div class="dot-box">
-            <button class="dot-icon" type="button" data-active></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="dot-icon" type="button"></button>
-        </div>
-        <div class="dot-box">
-            <button class="playToggle" type="button">&#10074;&#10074;</button>
-        </div>            
-    </div>
+    <div id="dots"></div>
 </body>
 </html>
