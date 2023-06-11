@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    position: relative;
+}
+div {
+    display: flex;
+}
+
+
+
+$z-priority:(
+    “top”: 3,
+    “middle”: 2
+);
+
+@function z-position($z-position){
+    @return map-get($z-priority , $z-position)
+}
+
+.container {
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+    @mixin slide-format {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .carousel {
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 29%;
+        position: relative;
+
+        .prev-btn,
+        .next-btn {
+            z-index: z-position(top);
+            background: transparent;
+            color: #ffffff;
+            opacity: 75%;
+            cursor: pointer;
+            font-size: 4rem;
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 12%;
+            //move it to the middle
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0px;
+            border: 0px;
+            outline: 0px;
+            &:active {
+                background-color: #ffffff;
+            }
+        }
+        .next-btn {
+            right: 0px;
+        }
+
+        #slides {
+            @include slide-format;
+            .slide {
+                @include slide-format;
+                height: 100%;
+                cursor: pointer;
+                display: block;
+                opacity: 0;
+                transition: 200ms opacity ease-in-out;
+                transition-delay: 200ms;
+            }
+            .slide[data-active] {
+                display: block;
+                opacity: 1;
+                z-index: z-position(top);
+                width: 100%;
+                transition-delay: 0ms;
+            }
+            img {
+                @include slide-format;
+                border-radius: 10px;
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+#dots {
+
+    width: 100%;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+
+    $dot-size: 20px;
+
+    @mixin dot-format {
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+        height: $dot-size;
+        width: $dot-size;
+        cursor: pointer;
+    }
+
+    @mixin middle-size {
+        width: 60%;
+        height: 60%;
+    }
+
+    @mixin small-size {
+        width: 35%;
+        height: 35%;
+    }
+
+    @mixin dot-img-format {
+        @include middle-size();
+        vertical-align: middle;
+    }
+
+    .play-icon {
+        @include dot-format;
+        margin: 0px 5px;
+        padding: 0px;
+        opacity: 20%;
+        img {
+            @include small-size();
+            vertical-align: middle;
+            &:hover {
+                @include dot-img-format;
+            }
+        }
+    }
+
+    .play-icon[data-active] {
+        opacity: 75%;
+        img {
+        @include dot-img-format;
+        }
+    }
+    .playToggle {
+        @include dot-format;
+        border: transparent;
+        img {
+        @include dot-img-format;
+        }
+    }
+}

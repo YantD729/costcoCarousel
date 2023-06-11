@@ -26,8 +26,8 @@ div {
   padding-bottom: 29%;
   position: relative;
 }
-.container .carousel .prev-btn, .container .carousel .next-btn {
-  z-index: 3;
+.container .carousel .prev-btn,
+.container .carousel .next-btn {
   background: transparent;
   color: #ffffff;
   opacity: 75%;
@@ -43,10 +43,9 @@ div {
   border: 0px;
   outline: 0px;
 }
-.container .carousel .prev-btn:active, .container .carousel .next-btn:active {
+.container .carousel .prev-btn:active,
+.container .carousel .next-btn:active {
   background-color: #ffffff;
-  border-color: #000000;
-  border-width: 2px;
 }
 .container .carousel .next-btn {
   right: 0px;
@@ -54,36 +53,33 @@ div {
 .container .carousel #slides {
   position: absolute;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .container .carousel #slides .slide {
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  display: block;
   position: absolute;
-  opacity: 0;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
 }
 .container .carousel #slides .slide[data-active] {
   display: block;
   opacity: 1;
-  z-index: 2;
   width: 100%;
   transition-delay: 0ms;
 }
 .container .carousel #slides img {
-  border-radius: 10px;
   position: absolute;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
@@ -100,28 +96,28 @@ div {
   display: inline-block;
   height: 20px;
   width: 20px;
+  cursor: pointer;
   margin: 0px 5px;
   padding: 0px;
-  cursor: pointer;
   opacity: 20%;
 }
 #dots .play-icon img {
-  vertical-align: middle;
   width: 35%;
   height: 35%;
+  vertical-align: middle;
 }
 #dots .play-icon img:hover {
-  opacity: 75%;
   width: 60%;
   height: 60%;
+  vertical-align: middle;
 }
 #dots .play-icon[data-active] {
   opacity: 75%;
 }
 #dots .play-icon[data-active] img {
-  vertical-align: middle;
   width: 60%;
   height: 60%;
+  vertical-align: middle;
 }
 #dots .playToggle {
   vertical-align: middle;
@@ -131,10 +127,9 @@ div {
   width: 20px;
   cursor: pointer;
   border: transparent;
-  opacity: 75%;
 }
 #dots .playToggle img {
-  vertical-align: middle;
   width: 60%;
   height: 60%;
+  vertical-align: middle;
 }/*# sourceMappingURL=styles.css.map */
