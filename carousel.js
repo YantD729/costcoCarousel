@@ -48,25 +48,24 @@ slidesData.forEach(function(slideData, index) {
 const slides = document.querySelectorAll('.slide')
 
 //add dots
-for (let i = 0; i <= numOfslidesData; i++) {
+for (let i = 0; i < numOfslidesData; i++) {
     const dotBtn = document.createElement("div")
     dotBtn.className = "play-icon"
-    if (i != numOfslidesData) {
-        const dotImg = document.createElement("img")
-        dotImg.setAttribute("src", dotImgSrc.url)
-        dotBtn.appendChild(dotImg)
-    }
+    const dotImg = document.createElement("img")
+    dotImg.setAttribute("src", dotImgSrc.url)
+    dotBtn.appendChild(dotImg)
     if (i === 0) dotBtn.setAttribute('data-active', '')
     dotsContainer.appendChild(dotBtn)
 }
 
 const dots = document.querySelectorAll(".play-icon")
 
-const toggleBtn = dots[numOfslidesData]
-toggleBtn.className = "play-icon playToggle"
+const toggleBtn = document.createElement("div")
+toggleBtn.className = "playToggle"
 const toggleImg = document.createElement("img")
 toggleImg.setAttribute("src", playIconSrc.url)
 toggleBtn.appendChild(toggleImg)
+dotsContainer.appendChild(toggleBtn)
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {

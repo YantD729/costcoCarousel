@@ -124,10 +124,17 @@ div {
   height: 60%;
 }
 #dots .playToggle {
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
   border: transparent;
   opacity: 75%;
 }
 #dots .playToggle img {
+  vertical-align: middle;
   width: 60%;
   height: 60%;
 }/*# sourceMappingURL=styles.css.map */
