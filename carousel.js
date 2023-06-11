@@ -21,6 +21,8 @@ const slidesData = [
 ]
 
 const dotImgSrc = {url: 'pictures/dot-icon.png'}
+const playIconSrc = {url: 'pictures/play-icon.png'}
+const stopIconSrc = {url: 'pictures/stop-icon.png'}
 
 const numOfslidesData = slidesData.length
 let activeIndex = 0
@@ -31,10 +33,10 @@ let isTogglePaused = false
 //add slidesData to slidesContainer
 
 slidesData.forEach(function(slideData, index) {
-    let slideElem = document.createElement('div')
+    const slideElem = document.createElement('div')
     slideElem.className = 'slide'
 
-    let imgElem = document.createElement('img')
+    const imgElem = document.createElement('img')
     imgElem.src = slideData.url
 
     if (index === 0) slideElem.setAttribute('data-active', '')
@@ -47,12 +49,14 @@ const slides = document.querySelectorAll('.slide')
 
 //add dots
 for (let i = 0; i <= numOfslidesData; i++) {
-    let dotBtn = document.createElement("div")
+    const dotBtn = document.createElement("div")
     dotBtn.className = "play-icon"
-    let dotImg = document.createElement("img")
-    dotImg.setAttribute("src", dotImgSrc.url)
+    if (i != numOfslidesData) {
+        const dotImg = document.createElement("img")
+        dotImg.setAttribute("src", dotImgSrc.url)
+        dotBtn.appendChild(dotImg)
+    }
     if (i === 0) dotBtn.setAttribute('data-active', '')
-    dotBtn.appendChild(dotImg)
     dotsContainer.appendChild(dotBtn)
 }
 
@@ -60,7 +64,9 @@ const dots = document.querySelectorAll(".play-icon")
 
 const toggleBtn = dots[numOfslidesData]
 toggleBtn.className = "play-icon playToggle"
-toggleBtn.textContent = '❚❚'
+const toggleImg = document.createElement("img")
+toggleImg.setAttribute("src", playIconSrc.url)
+toggleBtn.appendChild(toggleImg)
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -132,12 +138,12 @@ toggleBtn.addEventListener("click", () => {
     if (isTogglePaused) {
         autoPlayer()
         isTogglePaused = false
-        toggleBtn.textContent = '❚❚'
+        toggleImg.setAttribute("src", playIconSrc.url)
     }
     else if (!isTogglePaused) {
         clearInterval(autoPlayInterval)
         isTogglePaused = true
-        toggleBtn.textContent = '>'
+        toggleImg.setAttribute("src", stopIconSrc.url)
     }
 })
 

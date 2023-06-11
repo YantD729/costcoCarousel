@@ -126,4 +126,8 @@ div {
 #dots .playToggle {
   border: transparent;
   opacity: 75%;
+}
+#dots .playToggle img {
+  width: 60%;
+  height: 60%;
 }/*# sourceMappingURL=styles.css.map */
