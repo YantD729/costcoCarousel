@@ -59,6 +59,7 @@ for (let i = 0; i < numOfslidesData; i++) {
 }
 
 const dots = document.querySelectorAll(".play-icon")
+console.log(dots)
 
 const toggleBtn = document.createElement("div")
 toggleBtn.className = "playToggle"
@@ -149,9 +150,9 @@ toggleBtn.addEventListener("click", () => {
 //set the dot button
 dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
-        currSlide = slidesData[activeIndex]
+        currSlide = slides[activeIndex]
         currDot = dots[activeIndex]
-        slidesData[index].dataset.active = true
+        slides[index].dataset.active = true
         dots[index].dataset.active = true
         activeIndex = index
         delete currSlide.dataset.active
