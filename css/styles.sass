@@ -83,28 +83,32 @@ div
     width: 100%
     margin-top: 15px
     display: block
-    text-align: center
-    .dot-box
+    text-align: center    
+    .play-icon
+        vertical-align: middle
         text-align: center
         display: inline-block
         height: 20px
         width: 20px
         margin: 0px 5px
         padding: 0px
-        .dot-icon, .playToggle
-            display: inline-block
-            position: relative
-            background-color: transparent
-            cursor: pointer
-        .dot-icon
-            height: 10px
-            width: 10px
-            border-radius: 100%
-            background-color: #ffffff
-            border: 1px solid #a1a1a1
+        // background-color: transparent
+        cursor: pointer
+        opacity: 20%
+        img
+            vertical-align: middle
+            width: 35%
+            height: 35%
             &:hover
-                background-color: #a1a1a1
-        .dot-icon[data-active]
-            background-color: #a1a1a1
-        .playToggle
-            border: transparent
+                opacity: 75%
+                width: 60%
+                height: 60%
+    .play-icon[data-active]
+        opacity: 75%
+        img
+            vertical-align: middle
+            width: 60%
+            height: 60%
+    .playToggle
+        border: transparent
+        opacity: 75%

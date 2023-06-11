@@ -20,6 +20,8 @@ const slidesData = [
     {url: 'https://media-cdn.costco.com/www3-media/?libBID=3736261'},
 ]
 
+const dotImgSrc = {url: 'pictures/dot-icon.png'}
+
 const numOfslidesData = slidesData.length
 let activeIndex = 0
 let currSlide = null
@@ -44,27 +46,21 @@ slidesData.forEach(function(slideData, index) {
 const slides = document.querySelectorAll('.slide')
 
 //add dots
-for (let i = 0; i < numOfslidesData; i++) {
+for (let i = 0; i <= numOfslidesData; i++) {
     let dotBtn = document.createElement("div")
-    let button = document.createElement("button")
-    button.className = "play-icon dot-icon"
-    button.type = "button"
-    dotBtn.className = "dot-box"
-    dotBtn.appendChild(button)
+    dotBtn.className = "play-icon"
+    let dotImg = document.createElement("img")
+    dotImg.setAttribute("src", dotImgSrc.url)
     if (i === 0) dotBtn.setAttribute('data-active', '')
+    dotBtn.appendChild(dotImg)
     dotsContainer.appendChild(dotBtn)
 }
 
-let toggleBox = document.createElement("div")
-toggleBox.className = "dot-box"
-let toggleBtn = document.createElement("button")
-toggleBtn.className = "play-icon playToggle"
-toggleBtn.type = "button"
-toggleBtn.textContent = '❚❚'
-toggleBox.appendChild(toggleBtn);
-dotsContainer.appendChild(toggleBox)
-
 const dots = document.querySelectorAll(".play-icon")
+
+const toggleBtn = dots[numOfslidesData]
+toggleBtn.className = "play-icon playToggle"
+toggleBtn.textContent = '❚❚'
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {

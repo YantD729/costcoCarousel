@@ -94,33 +94,36 @@ div {
   display: block;
   text-align: center;
 }
-#dots .dot-box {
+#dots .play-icon {
+  vertical-align: middle;
   text-align: center;
   display: inline-block;
   height: 20px;
   width: 20px;
   margin: 0px 5px;
   padding: 0px;
-}
-#dots .dot-box .dot-icon, #dots .dot-box .playToggle {
-  display: inline-block;
-  position: relative;
-  background-color: transparent;
   cursor: pointer;
+  opacity: 20%;
 }
-#dots .dot-box .dot-icon {
-  height: 10px;
-  width: 10px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  border: 1px solid #a1a1a1;
+#dots .play-icon img {
+  vertical-align: middle;
+  width: 35%;
+  height: 35%;
 }
-#dots .dot-box .dot-icon:hover {
-  background-color: #a1a1a1;
+#dots .play-icon img:hover {
+  opacity: 75%;
+  width: 60%;
+  height: 60%;
 }
-#dots .dot-box .dot-icon[data-active] {
-  background-color: #a1a1a1;
+#dots .play-icon[data-active] {
+  opacity: 75%;
 }
-#dots .dot-box .playToggle {
+#dots .play-icon[data-active] img {
+  vertical-align: middle;
+  width: 60%;
+  height: 60%;
+}
+#dots .playToggle {
   border: transparent;
+  opacity: 75%;
 }/*# sourceMappingURL=styles.css.map */
