@@ -6,16 +6,9 @@ div {
     display: flex;
 }
 
-
-
-$z-priority:(
-    “top”: 3,
-    “middle”: 2
-);
-
 @function z-position($z-position){
     @return map-get($z-priority , $z-position)
-}
+};
 
 .container {
     object-fit: cover;
@@ -41,7 +34,7 @@ $z-priority:(
 
         .prev-btn,
         .next-btn {
-            z-index: z-position(top);
+            z-index: 3;
             background: transparent;
             color: #ffffff;
             opacity: 75%;
@@ -79,7 +72,7 @@ $z-priority:(
             .slide[data-active] {
                 display: block;
                 opacity: 1;
-                z-index: z-position(top);
+                z-index: 2;
                 width: 100%;
                 transition-delay: 0ms;
             }
